@@ -1,0 +1,20 @@
+torch
+torchvision
+
+# to load the stackoverflow dataset
+pandas
+numpy
+
+# huggingface
+-f git+https://github.com/huggingface/peft.git
+peft
+
+-f git+https://github.com/huggingface/transformers.git@main
+transformers
+
+accelerate[sagemaker]
+loralib
+scikit-learn
+evaluate
+datasets
+bitsandbytes
