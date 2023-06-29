@@ -3,14 +3,14 @@
   "build": {
     "dockerfile": "../Dockerfile",
     "args": {
-      "BASE_REPOSITORY": "https://github.com/dbpprt/jobgpt#egg=jobgpt[dev]",
+      "BASE_REPOSITORY": "https://github.com/dbpprt/samples#egg=samples[dev]",
       "PYTHON_VERSION": "3.10",
       
-      "PYTORCH_COMPUTE_PLATFORM": "cu118",
-      // "PYTORCH_COMPUTE_PLATFORM": "cpu",
+      // "PYTORCH_COMPUTE_PLATFORM": "cu118",
+      "PYTORCH_COMPUTE_PLATFORM": "cpu",
 
-      "BASE_IMAGE": "nvidia/cuda:12.1.0-devel-ubuntu22.04",
-      // "BASE_IMAGE": "ubuntu:22.04",
+      // "BASE_IMAGE": "nvidia/cuda:12.1.0-devel-ubuntu22.04",
+      "BASE_IMAGE": "ubuntu:22.04",
       
       "INSTALL_DOCKER": "1",
       "INSTALL_AWS_CLI": "1",
@@ -23,7 +23,7 @@
     // speeds up pytorch data loading
     "--ipc=host",
     // custom name for the container
-    "--name", "jobgpt_devcontainer"
+    "--name", "samples_devcontainer"
   ],
   "mounts": [
     // uncomment if you want to persist the container's hugging face cache
@@ -43,7 +43,7 @@
       "extensions": [
         // official docker extension to control docker on the host
         "ms-azuretools.vscode-docker",
-        // github copilot
+        // github copilot historically for testing
         "github.copilot",
         // gitlens - helps working in repositories
         "eamodio.gitlens",
