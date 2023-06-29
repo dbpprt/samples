@@ -29,7 +29,7 @@ def read_requirements(path):
 
 
 setup(
-    name="jobgpt",
+    name="samples",
     version="0.0.1",
     description="project_description",
     url="https://github.com/dbpprt/samples",
